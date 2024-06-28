@@ -7,14 +7,16 @@ export enum EStatus {
     delivered = 'DELIVERED'
 }
 
-export class Command {
+export class Order {
+    id: string;
     clientId: string;
     products: Products[];
     status: EStatus;
     date: Date;
     totalPrice: number;
 
-    constructor(clientId: string, products: Products[], status: EStatus, date: Date, totalPrice: number) {
+    constructor(id: string, clientId: string, products: Products[], status: EStatus, date: Date, totalPrice: number) {
+        this.id = id;
         this.clientId = clientId;
         this.products = products;
         this.status = status;

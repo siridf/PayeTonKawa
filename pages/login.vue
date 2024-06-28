@@ -54,9 +54,9 @@
 
       if (foundUser && foundUser.password === currentUser.value.password) {
         if (foundUser.role === ERoles.client) {
-          router.push(`/WebShop/${foundUser.id}/MainPage`)
+          router.push(`/WebShop/${foundUser.id}`)
         } else if (foundUser.role === ERoles.admin || foundUser.role === ERoles.seller) {
-          router.push(`/CRM/${foundUser.id}/CrmPage`)
+          router.push(`/CRM/${foundUser.id}`)
         }
       } else {
         console.log('Identifiants incorrects')
